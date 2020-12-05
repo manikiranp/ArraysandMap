@@ -10,7 +10,7 @@ function findPrimeFactors (num) {
     
     
     for (var i = 3; i <= num/2; i++) {
-    	console.log("num= "+num);
+    	
         while (num % i === 0) {
             primeFactors.push(i);
             num = num / i;
@@ -18,7 +18,7 @@ function findPrimeFactors (num) {
     }
 
     if (num > 2) {
-    	console.log("[[[num= "+num);
+    	
         primeFactors.push(num);
     }
     return primeFactors;
