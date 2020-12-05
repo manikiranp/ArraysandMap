@@ -5,7 +5,7 @@ var c1=0, c2=0, c3=0,c4=0,c5=0,c6=0;
 
 while ( (c1<10) && (c2<10) && (c3<10) && (c4<10) && (c5<10) && (c6<10) ) {
  ROLL 	=Math.floor(Math.random()*6)+1;
-	//console.log("Dice roll: "+ROLL)
+	
 
 	switch (ROLL) {
 		case 1:
@@ -32,9 +32,7 @@ while ( (c1<10) && (c2<10) && (c3<10) && (c4<10) && (c5<10) && (c6<10) ) {
 			c6++;
 			map.set('6',c6)
 			break;
-	//	default:
-	//		console.log("Run again")
-	//		break;
+
 		}
 
 	}

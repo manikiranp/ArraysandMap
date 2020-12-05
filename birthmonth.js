@@ -5,7 +5,7 @@ var c1=0, c2=0, c3=0,c4=0,c5=0,c6=0;c7=0;c8=0;c9=0,c10=0,c11=0,c12=0;
 var n=0;
 while (n<50) {
  MONTH=Math.floor(Math.random()*12)+1;
- //console.log("Dice roll: "+ROLL)
+ 
 	switch (MONTH) {
 		case 1:
 			c1++;
@@ -55,9 +55,6 @@ while (n<50) {
 			c12++;
 			map.set('Dec',c12)
 			break;
-	//	default:
-	//		console.log("Run again")
-	//		break;
 		}
 		n++;
 	}
