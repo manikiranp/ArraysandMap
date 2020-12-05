@@ -1,28 +1,31 @@
 const prompt = require('prompt-sync')({sigint: true});	
 
-const prime_check= (n) => {
-	for (let i=2; i<=n; i++) {
-		if (n%i==0) {
-			return false;
-		} 
-			return true; 
-	}	
-};
-const primefact= (inp) => {
-	let result=[];
-	if(inp%2==0) {
-		result.push(2);
-	}
-	for (let k=3; k<=inp; k++) {
-		if (inp%k==0) { 
-			if(prime_check(k)) {
-				result.push(k); 
-				inp=(inp/k);
-			}
-		}
-	}
-	console.log(result);
-};
-var inp=prompt("Enter a number to get its prime factors:");
-primefact(inp);
+function findPrimeFactors (num) {
+
+    var primeFactors = [];
+    while (num % 2 === 0) {
+        primeFactors.push(2);
+        num = num / 2;
+    }
+    
+    
+    for (var i = 3; i <= num/2; i++) {
+    	console.log("num= "+num);
+        while (num % i === 0) {
+            primeFactors.push(i);
+            num = num / i;
+        }
+    }
+
+    if (num > 2) {
+    	console.log("[[[num= "+num);
+        primeFactors.push(num);
+    }
+    return primeFactors;
+}
+
+ 
+var num=prompt("Enter a number to get its prime factors:");
+console.log(findPrimeFactors(num));
+
 
